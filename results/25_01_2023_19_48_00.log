@@ -1,0 +1,199 @@
+{'sport': 'basketball', 'competition': 'nba'}
+POUR LE MATCH : OklahomaCityThundervAtlantaHawks
+ @2.05/1.73 - winnamax/netbet - le r�sultat du calcul est : -6.583956012970549
+ @2.05/1.66 - winnamax/pmu - le r�sultat du calcul est : -9.02145166029975
+ @2.05/1.78 - winnamax/zebet - le r�sultat du calcul est : -4.960263085776928
+ @2.05/1.8 - winnamax/betclic - le r�sultat du calcul est : -4.336043360433606
+ @2.0/1.8 - netbet/winnamax - le r�sultat du calcul est : -5.555555555555558
+ @2.0/1.66 - netbet/pmu - le r�sultat du calcul est : -10.24096385542168
+ @2.0/1.78 - netbet/zebet - le r�sultat du calcul est : -6.17977528089888
+ @2.0/1.8 - netbet/betclic - le r�sultat du calcul est : -5.555555555555558
+ @2.1/1.8 - pmu/winnamax - le r�sultat du calcul est : -3.1746031746031633
+ @2.1/1.73 - pmu/netbet - le r�sultat du calcul est : -5.422515827140106
+ @2.1/1.78 - pmu/zebet - le r�sultat du calcul est : -3.798822899946508
+ @2.1/1.8 - pmu/betclic - le r�sultat du calcul est : -3.1746031746031633
+ @2.02/1.8 - zebet/winnamax - le r�sultat du calcul est : -5.0605060506050625
+ @2.02/1.73 - zebet/netbet - le r�sultat du calcul est : -7.308418703141983
+ @2.02/1.66 - zebet/pmu - le r�sultat du calcul est : -9.745914350471185
+ @2.02/1.8 - zebet/betclic - le r�sultat du calcul est : -5.0605060506050625
+ @2.05/1.8 - betclic/winnamax - le r�sultat du calcul est : -4.336043360433606
+ @2.05/1.73 - betclic/netbet - le r�sultat du calcul est : -6.583956012970549
+ @2.05/1.66 - betclic/pmu - le r�sultat du calcul est : -9.02145166029975
+ @2.05/1.78 - betclic/zebet - le r�sultat du calcul est : -4.960263085776928
+POUR LE MATCH : SacramentoKingsvTorontoRaptors
+ @1.62/2.27 - winnamax/netbet - le r�sultat du calcul est : -5.781258497851738
+ @1.62/2.25 - winnamax/pmu - le r�sultat du calcul est : -6.1728395061728225
+ @1.62/2.3 - winnamax/zebet - le r�sultat du calcul est : -5.206655931293613
+ @1.62/2.3 - winnamax/betclic - le r�sultat du calcul est : -5.206655931293613
+ @1.57/2.3 - netbet/winnamax - le r�sultat du calcul est : -7.172528385488786
+ @1.57/2.25 - netbet/pmu - le r�sultat du calcul est : -8.138711960368017
+ @1.57/2.3 - netbet/zebet - le r�sultat du calcul est : -7.172528385488786
+ @1.57/2.3 - netbet/betclic - le r�sultat du calcul est : -7.172528385488786
+ @1.56/2.3 - pmu/winnamax - le r�sultat du calcul est : -7.58082497212933
+ @1.56/2.27 - pmu/netbet - le r�sultat du calcul est : -8.155427538687432
+ @1.56/2.3 - pmu/zebet - le r�sultat du calcul est : -7.58082497212933
+ @1.56/2.3 - pmu/betclic - le r�sultat du calcul est : -7.58082497212933
+ @1.62/2.3 - zebet/winnamax - le r�sultat du calcul est : -5.206655931293613
+ @1.62/2.27 - zebet/netbet - le r�sultat du calcul est : -5.781258497851738
+ @1.62/2.25 - zebet/pmu - le r�sultat du calcul est : -6.1728395061728225
+ @1.62/2.3 - zebet/betclic - le r�sultat du calcul est : -5.206655931293613
+ @1.62/2.3 - betclic/winnamax - le r�sultat du calcul est : -5.206655931293613
+ @1.62/2.27 - betclic/netbet - le r�sultat du calcul est : -5.781258497851738
+ @1.62/2.25 - betclic/pmu - le r�sultat du calcul est : -6.1728395061728225
+ @1.62/2.3 - betclic/zebet - le r�sultat du calcul est : -5.206655931293613
+POUR LE MATCH : LosAngelesClippersvSanAntonioSpurs
+ @1.08/6.75 - winnamax/netbet - le r�sultat du calcul est : -7.407407407407396
+ @1.08/3.0 - winnamax/pmu - le r�sultat du calcul est : -25.92592592592591
+ @1.08/3.2 - winnamax/zebet - le r�sultat du calcul est : -23.84259259259258
+ @1.08/6.8 - winnamax/betclic - le r�sultat du calcul est : -7.2984749455337505
+ @1.08/6.25 - netbet/winnamax - le r�sultat du calcul est : -8.592592592592574
+ @1.08/3.0 - netbet/pmu - le r�sultat du calcul est : -25.92592592592591
+ @1.08/3.2 - netbet/zebet - le r�sultat du calcul est : -23.84259259259258
+ @1.08/6.8 - netbet/betclic - le r�sultat du calcul est : -7.2984749455337505
+ @1.32/6.25 - pmu/winnamax - le r�sultat du calcul est : 8.24242424242424
+FOUND !!!
+ @1.32/6.25 - pmu/winnamax - le r�sultat du calcul est : 8.24242424242424
+[['LosAngelesClippers' 'SanAntonioSpurs' 1.08 6.25
+  'LosAngelesClippersvSanAntonioSpurs' 'winnamax']
+ ['LosAngelesClippers' 'SanAntonioSpurs' 1.08 6.75
+  'LosAngelesClippersvSanAntonioSpurs' 'netbet']
+ ['LosAngelesLakers' 'SanAntonioSpurs' 1.32 3.0
+  'LosAngelesLakersvSanAntonioSpurs' 'pmu']
+ ['LosAngelesLakers' 'SanAntonioSpurs' 1.35 3.2
+  'LosAngelesLakersvSanAntonioSpurs' 'zebet']
+ ['LAClippers' 'SanAntonioSpurs' 1.08 6.8 'LAClippersvSanAntonioSpurs'
+  'betclic']]
+ @1.32/6.75 - pmu/netbet - le r�sultat du calcul est : 9.427609427609429
+FOUND !!!
+ @1.32/6.75 - pmu/netbet - le r�sultat du calcul est : 9.427609427609429
+[['LosAngelesClippers' 'SanAntonioSpurs' 1.08 6.25
+  'LosAngelesClippersvSanAntonioSpurs' 'winnamax']
+ ['LosAngelesClippers' 'SanAntonioSpurs' 1.08 6.75
+  'LosAngelesClippersvSanAntonioSpurs' 'netbet']
+ ['LosAngelesLakers' 'SanAntonioSpurs' 1.32 3.0
+  'LosAngelesLakersvSanAntonioSpurs' 'pmu']
+ ['LosAngelesLakers' 'SanAntonioSpurs' 1.35 3.2
+  'LosAngelesLakersvSanAntonioSpurs' 'zebet']
+ ['LAClippers' 'SanAntonioSpurs' 1.08 6.8 'LAClippersvSanAntonioSpurs'
+  'betclic']]
+ @1.32/3.2 - pmu/zebet - le r�sultat du calcul est : -7.007575757575757
+ @1.32/6.8 - pmu/betclic - le r�sultat du calcul est : 9.536541889483063
+FOUND !!!
+ @1.32/6.8 - pmu/betclic - le r�sultat du calcul est : 9.536541889483063
+[['LosAngelesClippers' 'SanAntonioSpurs' 1.08 6.25
+  'LosAngelesClippersvSanAntonioSpurs' 'winnamax']
+ ['LosAngelesClippers' 'SanAntonioSpurs' 1.08 6.75
+  'LosAngelesClippersvSanAntonioSpurs' 'netbet']
+ ['LosAngelesLakers' 'SanAntonioSpurs' 1.32 3.0
+  'LosAngelesLakersvSanAntonioSpurs' 'pmu']
+ ['LosAngelesLakers' 'SanAntonioSpurs' 1.35 3.2
+  'LosAngelesLakersvSanAntonioSpurs' 'zebet']
+ ['LAClippers' 'SanAntonioSpurs' 1.08 6.8 'LAClippersvSanAntonioSpurs'
+  'betclic']]
+ @1.35/6.25 - zebet/winnamax - le r�sultat du calcul est : 9.925925925925927
+FOUND !!!
+ @1.35/6.25 - zebet/winnamax - le r�sultat du calcul est : 9.925925925925927
+[['LosAngelesClippers' 'SanAntonioSpurs' 1.08 6.25
+  'LosAngelesClippersvSanAntonioSpurs' 'winnamax']
+ ['LosAngelesClippers' 'SanAntonioSpurs' 1.08 6.75
+  'LosAngelesClippersvSanAntonioSpurs' 'netbet']
+ ['LosAngelesLakers' 'SanAntonioSpurs' 1.32 3.0
+  'LosAngelesLakersvSanAntonioSpurs' 'pmu']
+ ['LosAngelesLakers' 'SanAntonioSpurs' 1.35 3.2
+  'LosAngelesLakersvSanAntonioSpurs' 'zebet']
+ ['LAClippers' 'SanAntonioSpurs' 1.08 6.8 'LAClippersvSanAntonioSpurs'
+  'betclic']]
+ @1.35/6.75 - zebet/netbet - le r�sultat du calcul est : 11.111111111111116
+FOUND !!!
+ @1.35/6.75 - zebet/netbet - le r�sultat du calcul est : 11.111111111111116
+[['LosAngelesClippers' 'SanAntonioSpurs' 1.08 6.25
+  'LosAngelesClippersvSanAntonioSpurs' 'winnamax']
+ ['LosAngelesClippers' 'SanAntonioSpurs' 1.08 6.75
+  'LosAngelesClippersvSanAntonioSpurs' 'netbet']
+ ['LosAngelesLakers' 'SanAntonioSpurs' 1.32 3.0
+  'LosAngelesLakersvSanAntonioSpurs' 'pmu']
+ ['LosAngelesLakers' 'SanAntonioSpurs' 1.35 3.2
+  'LosAngelesLakersvSanAntonioSpurs' 'zebet']
+ ['LAClippers' 'SanAntonioSpurs' 1.08 6.8 'LAClippersvSanAntonioSpurs'
+  'betclic']]
+ @1.35/3.0 - zebet/pmu - le r�sultat du calcul est : -7.407407407407396
+ @1.35/6.8 - zebet/betclic - le r�sultat du calcul est : 11.22004357298475
+FOUND !!!
+ @1.35/6.8 - zebet/betclic - le r�sultat du calcul est : 11.22004357298475
+[['LosAngelesClippers' 'SanAntonioSpurs' 1.08 6.25
+  'LosAngelesClippersvSanAntonioSpurs' 'winnamax']
+ ['LosAngelesClippers' 'SanAntonioSpurs' 1.08 6.75
+  'LosAngelesClippersvSanAntonioSpurs' 'netbet']
+ ['LosAngelesLakers' 'SanAntonioSpurs' 1.32 3.0
+  'LosAngelesLakersvSanAntonioSpurs' 'pmu']
+ ['LosAngelesLakers' 'SanAntonioSpurs' 1.35 3.2
+  'LosAngelesLakersvSanAntonioSpurs' 'zebet']
+ ['LAClippers' 'SanAntonioSpurs' 1.08 6.8 'LAClippersvSanAntonioSpurs'
+  'betclic']]
+ @1.08/6.25 - betclic/winnamax - le r�sultat du calcul est : -8.592592592592574
+ @1.08/6.75 - betclic/netbet - le r�sultat du calcul est : -7.407407407407396
+ @1.08/3.0 - betclic/pmu - le r�sultat du calcul est : -25.92592592592591
+ @1.08/3.2 - betclic/zebet - le r�sultat du calcul est : -23.84259259259258
+POUR LE MATCH : LosAngelesLakersvSanAntonioSpurs
+ @1.36/3.05 - winnamax/netbet - le r�sultat du calcul est : -6.316297010607519
+ @1.36/3.0 - winnamax/pmu - le r�sultat du calcul est : -6.8627450980392135
+ @1.36/3.2 - winnamax/zebet - le r�sultat du calcul est : -4.779411764705888
+ @1.36/3.15 - winnamax/betclic - le r�sultat du calcul est : -5.27544351073761
+ @1.33/3.15 - netbet/winnamax - le r�sultat du calcul est : -6.93400167084377
+ @1.33/3.0 - netbet/pmu - le r�sultat du calcul est : -8.521303258145352
+ @1.33/3.2 - netbet/zebet - le r�sultat du calcul est : -6.437969924812026
+ @1.33/3.15 - netbet/betclic - le r�sultat du calcul est : -6.93400167084377
+ @1.32/3.15 - pmu/winnamax - le r�sultat du calcul est : -7.503607503607501
+ @1.32/3.05 - pmu/netbet - le r�sultat du calcul est : -8.54446100347741
+ @1.32/3.2 - pmu/zebet - le r�sultat du calcul est : -7.007575757575757
+ @1.32/3.15 - pmu/betclic - le r�sultat du calcul est : -7.503607503607501
+ @1.35/3.15 - zebet/winnamax - le r�sultat du calcul est : -5.820105820105814
+ @1.35/3.05 - zebet/netbet - le r�sultat du calcul est : -6.8609593199757235
+ @1.35/3.0 - zebet/pmu - le r�sultat du calcul est : -7.407407407407396
+ @1.35/3.15 - zebet/betclic - le r�sultat du calcul est : -5.820105820105814
+ @1.36/3.15 - betclic/winnamax - le r�sultat du calcul est : -5.27544351073761
+ @1.36/3.05 - betclic/netbet - le r�sultat du calcul est : -6.316297010607519
+ @1.36/3.0 - betclic/pmu - le r�sultat du calcul est : -6.8627450980392135
+ @1.36/3.2 - betclic/zebet - le r�sultat du calcul est : -4.779411764705888
+POUR LE MATCH : MilwaukeeBucksvDenverNuggets
+ @1.29/3.5 - winnamax/netbet - le r�sultat du calcul est : -6.0908084163898035
+ @1.29/3.2 - winnamax/pmu - le r�sultat du calcul est : -8.769379844961245
+ @1.29/3.6 - winnamax/zebet - le r�sultat du calcul est : -5.297157622739013
+ @1.29/3.61 - winnamax/betclic - le r�sultat du calcul est : -5.220210869891995
+ @1.27/3.6 - netbet/winnamax - le r�sultat du calcul est : -6.517935258092722
+ @1.27/3.2 - netbet/pmu - le r�sultat du calcul est : -9.990157480314954
+ @1.27/3.6 - netbet/zebet - le r�sultat du calcul est : -6.517935258092722
+ @1.27/3.61 - netbet/betclic - le r�sultat du calcul est : -6.440988505245704
+ @1.28/3.6 - pmu/winnamax - le r�sultat du calcul est : -5.902777777777768
+ @1.28/3.5 - pmu/netbet - le r�sultat du calcul est : -6.696428571428559
+ @1.28/3.6 - pmu/zebet - le r�sultat du calcul est : -5.902777777777768
+ @1.28/3.61 - pmu/betclic - le r�sultat du calcul est : -5.82583102493075
+ @1.29/3.6 - zebet/winnamax - le r�sultat du calcul est : -5.297157622739013
+ @1.29/3.5 - zebet/netbet - le r�sultat du calcul est : -6.0908084163898035
+ @1.29/3.2 - zebet/pmu - le r�sultat du calcul est : -8.769379844961245
+ @1.29/3.61 - zebet/betclic - le r�sultat du calcul est : -5.220210869891995
+ @1.29/3.6 - betclic/winnamax - le r�sultat du calcul est : -5.297157622739013
+ @1.29/3.5 - betclic/netbet - le r�sultat du calcul est : -6.0908084163898035
+ @1.29/3.2 - betclic/pmu - le r�sultat du calcul est : -8.769379844961245
+ @1.29/3.6 - betclic/zebet - le r�sultat du calcul est : -5.297157622739013
+POUR LE MATCH : NewOrleansPelicansvMinnesotaTimberwolves
+ @1.68/2.17 - winnamax/netbet - le r�sultat du calcul est : -5.606758832565273
+ @1.68/2.2 - winnamax/pmu - le r�sultat du calcul est : -4.978354978354971
+ @1.68/2.17 - winnamax/zebet - le r�sultat du calcul est : -5.606758832565273
+ @1.68/2.18 - winnamax/betclic - le r�sultat du calcul est : -5.395369156837049
+ @1.62/2.15 - netbet/winnamax - le r�sultat du calcul est : -8.24002296870514
+ @1.62/2.2 - netbet/pmu - le r�sultat du calcul est : -7.182940516273839
+ @1.62/2.17 - netbet/zebet - le r�sultat du calcul est : -7.811344370484141
+ @1.62/2.18 - netbet/betclic - le r�sultat du calcul est : -7.599954694755917
+ @1.6/2.15 - pmu/winnamax - le r�sultat du calcul est : -9.011627906976738
+ @1.6/2.17 - pmu/netbet - le r�sultat du calcul est : -8.582949308755762
+ @1.6/2.17 - pmu/zebet - le r�sultat du calcul est : -8.582949308755762
+ @1.6/2.18 - pmu/betclic - le r�sultat du calcul est : -8.371559633027514
+ @1.68/2.15 - zebet/winnamax - le r�sultat du calcul est : -6.035437430786272
+ @1.68/2.17 - zebet/netbet - le r�sultat du calcul est : -5.606758832565273
+ @1.68/2.2 - zebet/pmu - le r�sultat du calcul est : -4.978354978354971
+ @1.68/2.18 - zebet/betclic - le r�sultat du calcul est : -5.395369156837049
+ @1.69/2.15 - betclic/winnamax - le r�sultat du calcul est : -5.683225540112846
+ @1.69/2.17 - betclic/netbet - le r�sultat du calcul est : -5.254546941891869
+ @1.69/2.2 - betclic/pmu - le r�sultat du calcul est : -4.626143087681545
+ @1.69/2.17 - betclic/zebet - le r�sultat du calcul est : -5.254546941891869
