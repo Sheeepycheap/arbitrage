@@ -1,4 +1,4 @@
-import discord_notify as dn
+#import discord_notify as dn
 import time
 from datetime import datetime
 import os
@@ -15,8 +15,8 @@ def log(message, end="\n"):
     with open(filename, 'a') as file:
         file.write(message + end)
     
-def discord(message):
-    notifier = dn.Notifier(URL)
-    time.sleep(1)
-    notifier.send(message,print_message=False)
+# def discord(message):
+#     notifier = dn.Notifier(URL)
+#     time.sleep(1)
+#     notifier.send(message,print_message=False)
 

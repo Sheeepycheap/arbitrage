@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Surebet Opportunities</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}">
+
+    <script>
+        MathJax = {
+            tex: {
+                inlineMath: [['$', '$'], ['\\(', '\\)']],
+                displayMath: [['$$', '$$'], ['\\[', '\\]']],
+                processEscapes: true,
+                processEnvironments: true
+            },
+            svg: {
+                fontCache: 'global'
+            }
+        };
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+    <script>
+        function calculateBet(equipe1, equipe2, oddsA, oddsB, oddsC, siteA, siteB, siteC) {
+            // Convert to numbers
+            oddsA = Number(oddsA);
+            oddsB = Number(oddsB);
+            oddsC = Number(oddsC);
+
+            // Calculate arbitrage
+            var arb = 1 - (1/oddsA + 1/oddsB + (oddsC ? 1/oddsC : 0));
+
+            // Ask for total bet amount
+            var totalBet = Number(prompt("Veuillez entrer le montant total que vous voulez parier :"));
+
+            if (!isNaN(totalBet) && totalBet > 0) {
+                // Calculate individual bet amounts
+                var betA = totalBet / ((1 - arb)*oddsA);
+                var betB = totalBet / ((1 - arb)*oddsB);
+                var betC = oddsC ? totalBet / ((1 - arb)*oddsC) : 0;
+
+                // Calculate potential earnings
+                var earningsA = betA*oddsA - totalBet;
+                var earningsB = betB*oddsB - totalBet;
+                var earningsC = betC*oddsC - totalBet;
+
+                // Show results
+                alert(
+                    " Il faut aller sur le bookmaker " + siteA + " et parier sur l'issue [Victoire de " + equipe1 +"] avec la côte " + oddsA + " (Issue A), aller sur le bookmaker " + siteB + " et parier sur l'issue [égalité] avec la côte " + oddsB + " (Issue B)" + (oddsC ? ", et aller sur le bookmaker " + siteC + " et parier sur l'issue [Victoire de " +  equipe2 + "] avec la côte " + oddsC + " (Issue C)" : "") +
+                    "\n \n  Gain garantie de " + ((earningsA/totalBet)*100).toFixed(2) + "% . \n \n Par exemple pour " + totalBet + " euros, il faut parier " + betA.toFixed(2) + " sur l'issue A, " + betB.toFixed(2) + " sur l'issue B et " + betC.toFixed(2) + " sur l'issue C :" +
+                    "\n -> Issue A : tu gagneras " + betA.toFixed(2) + "*" + oddsA + " - " + totalBet + " = " + earningsA.toFixed(2) +
+                    "\n -> Issue B : tu gagneras " + betB.toFixed(2) + "*" + oddsB + " - " + totalBet + " = " + earningsB.toFixed(2) +
+                    (oddsC ? "\n -> Issue C : tu gagneras " + betC.toFixed(2) + "*" + oddsC + " - " + totalBet + " = " + earningsC.toFixed(2) : "")
+                );
+            } else {
+                alert("Montant de pari invalide. Veuillez réessayer.");
+            }
+        }
+    </script>
+
+    <script>
+        function calculateBetBasket(equipe1, equipe2, oddsA, oddsB, siteA, siteB) {
+            // Convert to numbers
+            oddsA = Number(oddsA);
+            oddsB = Number(oddsB);
+
+            // Calculate arbitrage
+            var arb = 1 - (1/oddsA + 1/oddsB);
+
+            // Ask for total bet amount
+            var totalBet = Number(prompt("Veuillez entrer le montant total que vous voulez parier :"));
+
+            if (!isNaN(totalBet) && totalBet > 0) {
+                // Calculate individual bet amounts
+                var betA = totalBet / ((1 - arb)*oddsA);
+                var betB = totalBet / ((1 - arb)*oddsB);
+
+                // Calculate potential earnings
+                var earningsA = betA*oddsA - totalBet;
+                var earningsB = betB*oddsB - totalBet;
+
+                // Show results
+                alert(
+                    "Il faut aller sur le bookmaker " + siteA + " et parier sur l'issue [Victoire de " + equipe1 +"] avec la côte " + oddsA + " (Issue A), aller sur le bookmaker " + siteB + " et parier sur l'issue [Victoire de " +  equipe2 + "] avec la côte " + oddsB + " (Issue B)" +
+                    "\n\nGain garantie de " + ((earningsA/totalBet)*100).toFixed(2) + "%. \n\nPar exemple pour " + totalBet + " euros, il faut parier " + betA.toFixed(2) + " sur l'issue A et " + betB.toFixed(2) + " sur l'issue B :" +
+                    "\n-> Issue A : tu gagneras " + betA.toFixed(2) + "*" + oddsA + " - " + totalBet + " = " + earningsA.toFixed(2) +
+                    "\n-> Issue B : tu gagneras " + betB.toFixed(2) + "*" + oddsB + " - " + totalBet + " = " + earningsB.toFixed(2)
+                );
+            } else {
+                alert("Montant de pari invalide. Veuillez réessayer.");
+            }
+        }
+
+    </script>
+
+</head>
+<body>
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-custom bg-custom">
+            <a class="navbar-brand" href="surebet.html">Surebet</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Accueil</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="historique.html">Historique</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <div class="content-wrapper2">
+            <section class="surebet-opportunities-foot">
+                <h2>Opportunités de Surebet</h2>
+                <p>Opportunités de Surebet du moment pour le football : </p>
+
+                <table class="table table-striped">
+                    <thead>
+                        <tr>
+                            <th>Match</th>
+                            <th>Team 1</th>
+                            <th>Team 2</th>
+                            <th>Côte équipe 1</th>
+                            <th>Côte égalité</th>
+                            <th>Côte équipe 2</th>
+                            <th>Victoire équipe 1 bookmaker</th>
+                            <th>égalité bookmaker</th>
+                            <th>Victoire équipe 2 bookmaker</th>
+                            <th>Gain (en %)</th>
+                            <th>Date</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {% if rows_foot|length > 0 %}
+                        {% for row in rows_foot %}
+                        <tr>
+                            <td>{{ row[0] }}</td>
+                            <td>{{ row[1] }}</td>
+                            <td>{{ row[2] }}</td>
+                            <td>{{ row[3] }}</td>
+                            <td>{{ row[4] }}</td>
+                            <td>{{ row[5] }}</td>
+                            <td>{{ row[6] }}</td>
+                            <td>{{ row[7] }}</td>
+                            <td>{{ row[8] }}</td>
+                            <td>{{ row[9]|round(2) }}</td>
+                            <td>{{ row[10] }}</td>
+                            <td>
+                                <button onclick="calculateBet('{{ row[1] }}','{{ row[2] }}', '{{ row[3] }}', '{{ row[4] }}', '{{ row[5] }}', '{{ row[6] }}', '{{ row[7] }}', '{{ row[8] }}')">🧮</button>
+                            </td>
+                        </tr>
+                        {% endfor %}
+                        {% else %}
+                        <tr>
+                            <td colspan="11">Il n'y a aucune opportunité pour le moment</td>
+                        </tr>
+                        {% endif %}
+                    </tbody>
+                </table>
+            </section>
+            <section class="surebet-opportunities-basket">
+                <p>Opportunités de Surebet Basket du moment</p>
+                <table class="table table-striped">
+                    <thead>
+                        <tr>
+                            <th>Match</th>
+                            <th>Team 1</th>
+                            <th>Team 2</th>
+                            <th>Côte équipe 1</th>
+                            <th>Côte équipe 2</th>
+                            <th>Victoire équipe 1 bookmaker</th>
+                            <th>Victoire équipe 2 bookmaker</th>
+                            <th>Gain (en %)</th>
+                            <th>Date</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {% if rows_basket|length > 0 %}
+                        {% for row in rows_basket %}
+                        <tr>
+                            <td>{{ row[0] }}</td>
+                            <td>{{ row[1] }}</td>
+                            <td>{{ row[2] }}</td>
+                            <td>{{ row[3] }}</td>
+                            <td>{{ row[4] }}</td>
+                            <td>{{ row[5] }}</td>
+                            <td>{{ row[6] }}</td>
+                            <td>{{ row[7]|round(2) }}</td>
+                            <td>{{ row[8] }}</td>
+                            <td>
+                                <button onclick="calculateBetBasket('{{ row[1] }}','{{ row[2] }}','{{ row[3] }}', '{{ row[4] }}', '{{ row[5] }}', '{{ row[6] }}')">🧮</button>
+                            </td>
+                        </tr>
+                        {% endfor %}
+                        {% else %}
+                        <tr>
+                            <td colspan="9">Il n'y a aucune opportunité pour le moment</td>
+                        </tr>
+                        {% endif %}
+                    </tbody>
+                </table>
+                
+            </section>
+
+
+        </div>
+    </main>
+
+</body>
+</html>

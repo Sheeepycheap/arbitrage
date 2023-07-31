@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Surebet Opportunities</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+
+    <script>
+        MathJax = {
+            tex: {
+                inlineMath: [['$', '$'], ['\\(', '\\)']],
+                displayMath: [['$$', '$$'], ['\\[', '\\]']],
+                processEscapes: true,
+                processEnvironments: true
+            },
+            svg: {
+                fontCache: 'global'
+            }
+        };
+    </script>
+
+    <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+</head>
+<body>
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-custom bg-custom">
+            <a class="navbar-brand" href="surebet.html">Surebet</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Accueil</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="historique.html">Historique</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <div class="content-wrapper2">
+            <section class="surebet-opportunities-foot">
+                <h2>Opportunités de Surebet</h2>
+                <p>Opportunités de Surebet depuis le lancement du site pour le football : </p>
+                <table class="table table-striped">
+                    <thead>
+                        <tr>
+                            <th>Match</th>
+                            <th>Team 1</th>
+                            <th>Team 2</th>
+                            <th>Côte équipe 1</th>
+                            <th>Côte égalité</th>
+                            <th>Odd équipe 2</th>
+                            <th>Victoire équipe 1 bookmaker</th>
+                            <th>égalité bookmaker</th>
+                            <th>Victoire équipe 2 bookmaker</th>
+                            <th>Gain (en %)</th>
+                            <th>Date</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {% for row in rows_foot %}
+                        <tr>
+                            <td>{{ row[0] }}</td>
+                            <td>{{ row[1] }}</td>
+                            <td>{{ row[2] }}</td>
+                            <td>{{ row[3] }}</td>
+                            <td>{{ row[4] }}</td>
+                            <td>{{ row[5] }}</td>
+                            <td>{{ row[6] }}</td>
+                            <td>{{ row[7] }}</td>
+                            <td>{{ row[8] }}</td>
+                            <td>{{ row[9] }}</td>
+                            <td>{{ row[10] }}</td>
+                        </tr>
+                        {% endfor %}
+                    </tbody>
+                </table>
+            </section>
+            <section class="surebet-opportunities-basket">
+                <p>Opportunités de Surebet depuis le lancement du site de Basket</p>
+                <table class="table table-striped">
+                    <thead>
+                        <tr>
+                            <th>Match</th>
+                            <th>Team 1</th>
+                            <th>Team 2</th>
+                            <th>Côte équipe 1</th>
+                            <th>Côte équipe 2</th>
+                            <th>Victoire équipe 1 bookmaker</th>
+                            <th>Victoire équipe 2 bookmaker</th>
+                            <th>Gain (en %)</th>
+                            <th>Date</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {% for row in rows_basket %}
+                        <tr>
+                            <td>{{ row[0] }}</td>
+                            <td>{{ row[1] }}</td>
+                            <td>{{ row[2] }}</td>
+                            <td>{{ row[3] }}</td>
+                            <td>{{ row[4] }}</td>
+                            <td>{{ row[5] }}</td>
+                            <td>{{ row[6] }}</td>
+                            <td>{{ row[7] }}</td>
+                            <td>{{ row[8] }}</td>
+                        </tr>
+                        {% endfor %}
+                    </tbody>
+                </table>
+                
+            </section>
+
+            <section class="total-returns">
+                <h4>Gains totaux si toutes les opportunités étaient suivies : {{ total_returns|round(2) }}%</h4>
+            </section>
+
+            <div id="chartContainer" style=" margin: 0 auto;">
+                <canvas id="portfolioChart"></canvas>
+            </div>
+                <script>
+                    var ctx = document.getElementById('portfolioChart').getContext('2d');
+                    var myChart = new Chart(ctx, {
+                        type: 'line',
+                        data: {
+                            labels: {{ dates|tojson }},
+                            datasets: [{
+                                label: 'Evolution du portefeuille (en euros)',
+                                data: {{ portfolio_values|tojson }},
+                                borderColor: 'rgba(75, 192, 192, 1)',
+                                borderWidth: 2,
+                                fill: false
+                            }]
+                        },
+                        options: {
+                            responsive: true,
+                            scales: {
+                                y: {
+                                    beginAtZero: true
+                                }
+                            }
+                        }
+                    });
+                </script>
+            
+            
+        </div>
+    </main>
+
+</body>
+</html>

@@ -1,0 +1,87 @@
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    color: #333;
+}
+
+/* Header */
+header {
+    background-color: #0f0f0f; /* Change the background color */
+    color: #ffffff;
+    text-align: center;
+    padding: 1rem;
+}
+
+/* Change the color of navbar links */
+.navbar-nav .nav-link {
+    color: #ffffff;
+}
+
+/* Change the color of navbar links on hover */
+.navbar-nav .nav-link:hover {
+    color: #362691;
+}
+
+
+/* Main content */
+/* Main content */
+main {
+    padding: 2rem;
+}
+
+/* Section titles */
+section h2 {
+    margin-bottom: 1rem;
+}
+
+.content-wrapper {
+    max-width: 800px;
+    margin: 0 auto;
+    background-color: #f5f5f5; /* Couleur de fond légèrement plus grise */
+    padding: 20px; /* Ajoutez un peu d'espace entre le texte et la bordure */
+    border-radius: 5px; /* Arrondir légèrement les coins */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Effet d'ombre */
+}
+
+.content-wrapper2 {
+    max-width: 1350px;
+    margin: 0 auto;
+    background-color: #f5f5f5; /* Couleur de fond légèrement plus grise */
+    padding: 20px; /* Ajoutez un peu d'espace entre le texte et la bordure */
+    border-radius: 5px; /* Arrondir légèrement les coins */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Effet d'ombre */
+    -webkit-overflow-scrolling: touch;
+    overflow-x: auto;
+    width: 100%;
+}
+
+
+.surebetting-explanation ul {
+    list-style: none;
+    padding: 5;
+}
+
+.surebetting-explanation ul li:before {
+    content: "-";
+    background: lightgreen;
+    border-radius: 1ch;
+    padding-inline: 1ch;
+    margin-inline-end: 1ch;
+}
+
+.simple-bullets {
+    list-style-type: disc;
+    padding-left: 40px;
+}
+
+ 
+/* Lists */
+section ul {
+    list-style-type: disc; /* Add bullets points */
+    padding-left: 2rem;
+}
+
+section li {
+    margin-bottom: 0.5rem;
+}
+

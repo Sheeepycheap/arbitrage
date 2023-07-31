@@ -1,6 +1,10 @@
 import arb
 import log
+import sqlite3
 
+
+
+#
 log.init()
 
 competition = [
@@ -24,6 +28,7 @@ def main(competition):
     for comp in competition :
         try :
             compet = arb.merge_results(competition=comp)
+
         except :
             continue
 
@@ -36,6 +41,7 @@ def main(competition):
         elif comp['sport'] == 'basketball' :
             print("basket")
             arb.arb_basket(compet)
+
 
 main(competition=competition)
     

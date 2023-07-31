@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Site Surebet</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}">
+
+   
+        
+        <script>
+            MathJax = {
+                tex: {
+                    inlineMath: [['$', '$'], ['\\(', '\\)']],
+                    displayMath: [['$$', '$$'], ['\\[', '\\]']],
+                    processEscapes: true,
+                    processEnvironments: true
+                },
+                svg: {
+                    fontCache: 'global'
+                }
+            };
+        </script>
+        <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js"></script>
+    
+    
+</head>
+<body>
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-custom bg-custom">
+            <a class="navbar-brand" href="surebet.html">Surebet</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item active">
+                        <a class="nav-link" href="index.html">Accueil</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="historique.html">Historique</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+    
+
+    <main>
+        <div class="content-wrapper">
+        <section class="surebetting-explanation">
+            
+                <h2>Qu'est-ce que le surebetting ?</h2>
+                <p>Le surebetting, également connu sous le nom d'arbitrage sportif, est une technique qui permet de parier sur tous les résultats possibles d'un événement sportif en utilisant les cotes offertes par différents bookmakers, de manière à garantir un profit, quel que soit l'issue de l'événement.</p>
+                <h4>Exemple n°1 - Pas de surebet</h4>
+                <p>Prenons un exemple concret pour illustrer le surebet. Pour un match opposant l'Équipe A et l'Équipe B, les bookmakers proposent les cotes suivantes :</p>
+                <ul>
+                    <li>Victoire de l'Équipe A : 2.20</li>
+                    <li>Match nul : 3.50</li>
+                    <li>Victoire de l'Équipe B : 3.30</li>
+                </ul>
+                <p>Le calcul surebet est le suivant :</p>
+                <p>$$\frac{1}{2.20} = 0.454, \frac{1}{3.50} = 0.285, \frac{1}{3.30} = 0.303$$</p>
+                <p>Ensuite on procède à l’addition de tous ces résultats :</p>
+                <p>$$0.454 + 0.285 + 0.303 = 1.042$$</p>
+                <p>La somme obtenue est supérieure à 1. En conclusion, il n’y a pas de surebet sur cet événement sportif.</p>
+            
+                <h4>Exemple n°2 - Surebet gagnant</h4>
+                <p>Prenons à présent le cas d'un match de football entre l'Équipe A (3,00) et l'Équipe B (2,8), avec une cote de 3,40 pour le match nul. Pour vérifier si nous sommes en présence d'un surebet, on fera la somme de l'inverse des 3 cotes pour voir si elle est inférieure à 1.</p>
+                <p>$$(1 / 3) + (1 / 2,8) + (1 / 3,40) = 0,333 + 0,357 + 0,294 = 0,984$$</p>
+                <p>$0,984 < 1 $, donc il y a un surebet, qui sera de $(1 - 0,984) * 100$, soit $1,61$%</p>
+                
+                <h4>Répartition des mises</h4>
+                <p>En répartissant votre mise sur ces 3 résultats possibles, vous êtes sûr d'empocher 1,61 % de gains.</p>
+                <p>La répartition des mises se fait selon la formule suivante, dans un cas où il y a N possibilités :</p>
+                <ul>
+                    <li>$ Mise \ 1 = \frac{Mise \ totale}{(somme \ de \ l'inverse \ des \ cotes \ \times  \ cote \ 1)}$</li>
+                    <li>$ Mise \ 2 = \frac{Mise \ totale}{(somme \ de \ l'inverse \ des \ cotes \ \times  \ cote \ 2)}$</li>
+                    <li>...</li>
+                    <li>$ Mise \ N = \frac{Mise \ totale}{(somme \ de \ l'inverse \ des \ cotes \ \times  \ cote \ N)}$</li>
+                </ul>
+                <p>Ici, pour une mise totale de 1000 € :</p>
+                <ul>
+                    <li>$Mise \ 1 = \frac{1000\,\text{€}}{(0.984 \times 3)} = 338,75\,\text{€}$</li>
+                    <li>$Mise \ 2 = \frac{1000\,\text{€}}{(0.984 \times 2.80)} = 362,93\,\text{€}$</li>
+                    <li>$Mise \ 3 = \frac{1000\,\text{€}}{(0.984 \times 3.40)} = 298,32\,\text{€}$</li>
+                </ul>
+                <p>Ainsi,</p>
+                <ul>
+                    <li>Si l'Équipe A gagne, vous empochez $ 338,75 \times 3 $ ; soit $ 1016,25 $€</li>
+                    <li>Si l'Équipe B gagne, vous empochez $ 362,93 \times 2,8 $ ; soit $ 1016,25 $€</li>
+                    <li>En cas de match nul, vous empochez $ 298,32 \times 3,4 $  ; soit $ 1016,25 $€</li>
+                </ul>
+                <p>Dans cet exemple, peu importe le résultat du match, vous êtes assuré de gagner $16$ €.</p>
+                <h5>Disclaimer</h5>
+                <p>Le but de ce site est d'être une sorte de portefeuille. Pour cette raison, le site est totalement gratuit et est sans création de compte. Cependant, la liste des bookmakers est donc très petite. Voici la liste des bookmakers que nous utilisons pour nos calculs de surebet :</p>
+                </section>
+                <ul class="simple-bullets">
+                    <li>Netbet</li>
+                    <li>Betclic</li>
+                    <li>Zebet</li>
+                    <li>Winamax</li>
+                    <li>PMU</li>
+                </ul>
+                <p>Pour voir les opportunités d'arbitrage du moment, cliquez sur <a href="surebet.html">"Surebet"</a> sur le menu de navigation. Pour voir l'ensemble des opportunités que nous avons collectées cliquez sur <a href="historique.html">"Historique"</a></p>
+
+            
+        
+        </div>
+    </main>
+</body>
+</html>
+

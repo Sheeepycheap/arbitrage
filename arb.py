@@ -8,7 +8,8 @@ from difflib import SequenceMatcher
 import numpy as np
 import log
 import sys
-
+import sqlite3
+import DBhandler
 
 
 def similar(a,b):
@@ -23,6 +24,7 @@ def similar_ratio(a,b) :
     for i in range(len(b)) :
         res.append(SequenceMatcher(None,a,b[i]).ratio())
     return max(res)
+
 def merge_results(competition):
     matches = []
     win = winnamax.into_a_pd(competition)
@@ -71,10 +73,10 @@ def gain_2(n,arb,site_a,a,site_b,b) :
     gain = " -> Gain garantie de {:.2f}% . Par exemple pour {} euros, il faut parier {} sur l'issue A et {} sur l'issue B :".format((EA/n)*100,n,MA,MB)
     outcome_a = " -> Issue A : tu gagneras {}*{} - {} = {} ".format(MA,a,n,EA)
     outcome_b = " -> Issue B : tu gagneras {}*{} - {} = {} ".format(MB,b,n,EB)
-    log.discord(message)
-    log.discord(gain)
-    log.discord(outcome_a)
-    log.discord(outcome_b)
+    # log.discord(message)
+    # log.discord(gain)
+    # log.discord(outcome_a)
+    # log.discord(outcome_b)
     log.log(message)
     log.log(gain)
     log.log(outcome_a)
@@ -92,11 +94,11 @@ def gain_3(n,arb,site_a,a,site_b,b,site_c,c) :
     outcome_a = " -> Issue A : tu gagneras {}*{} - {} = {} ".format(MA,a,n,EA)
     outcome_b = " -> Issue B : tu gagneras {}*{} - {} = {} ".format(MB,b,n,EB)
     outcome_c = " -> Issue C : tu gagneras {}*{} - {} = {} ".format(MC,c,n,EC)
-    log.discord(message)
-    log.discord(gain)
-    log.discord(outcome_a)
-    log.discord(outcome_b)
-    log.discord(outcome_c)
+    # log.discord(message)
+    # log.discord(gain)
+    # log.discord(outcome_a)
+    # log.discord(outcome_b)
+    # log.discord(outcome_c)
     log.log(message)
     log.log(gain)
     log.log(outcome_a)
@@ -108,6 +110,8 @@ def gain_3(n,arb,site_a,a,site_b,b,site_c,c) :
 
 def arb_foot(matches) :
     for match in matches :
+        team1 = match['team1'].values[0]
+        team2 = match['team2'].values[0]
         key = match['key'].values[0]
         a = match['odd of team 1 winning'].values
         c = match['odd of team 2 winning'].values
@@ -125,24 +129,33 @@ def arb_foot(matches) :
                         arb = arbitrage_foot_calcul(a[i],b[j],c[k])
                         log.log(" @{}/{}/{} - {}/{}/{} - le resultat du calcul est : {}".format(a[i],b[j],c[k],site[i],site[j],site[k],arb))
 
-                        if arb > 0 :
+                        if arb > -7 :
+                            
+                            opp = DBhandler.Opp_football(key,team1,team2,a[i],b[j],c[k],site[i],site[j],site[k],arb)
+                            opp.add()
+                            opp.histo_add()
+                            opp.remove_duplicates()
+                            opp.close()
+
                             message = " -> FOUND !!! Vérifiez si les côtes et le match est bien celui annoncé sur les site. Il se peut que l'algorithme confonde certaine équipe, par exemple LA Clippers et LA Lakers."
-                            log.discord(message=message)
-                            log.discord(" -> POUR LE MATCH : {}".format(key))
+                            #log.discord(message=message)
+                            #log.discord(" -> POUR LE MATCH : {}".format(key))
                             message = " @{}/{}/{} - {}/{}/{} - le résultat du calcul est : {}".format(a[i],b[j],c[k],site[i],site[j],site[k],arb)
-                            log.discord(message=message)
-                            log.discord(str(match.to_numpy()))
+                            #log.discord(message=message)
+                            #log.discord(str(match.to_numpy()))
                             log.log("FOUND !!!")
                             log.log(message)
                             log.log(str(match.to_numpy()))
                             gain_3(1000,arb,site[i],a[i],site[j],b[j],site[k],c[k])
-                            log.discord("--")
+                            #log.discord("--")
 
 #"""""""""""""""""""""""""""""""""""""""""#
 
 def arb_basket(matches) :
     for match in matches :
         key = match['key'].values[0]
+        team1 = match['team1'].values[0]
+        team2 = match['team2'].values[0]
         a = match['odd of team 1 winning'].values
         b = match['odd of team 2 winning'].values
         site = match['site'].values
@@ -159,16 +172,26 @@ def arb_basket(matches) :
                     log.log(" @{}/{} - {}/{} - le résultat du calcul est : {}".format(a[i],b[j],site[i],site[j],arb))
                     
                     if arb > 0 :
+                        
+                        opp = DBhandler.Opp_basket(key,team1,team2,a[i],b[j],site[i],site[j],arb)
+                        opp.add()
+                        opp.histo_add()
+                        #opp.remove_duplicates()
+                        opp.close()
+
+
                         message = " -> FOUND !!! Vérifiez si les côtes et le match est bien celui annoncé sur les site. Il se peut que l'algorithme confonde certaine équipe, par exemple LA Clippers et LA Lakers."
-                        log.discord(message=message)
-                        log.discord(" -> POUR LE MATCH : {}".format(key))
+                        # log.discord(message=message)
+                        # log.discord(" -> POUR LE MATCH : {}".format(key))
                         message = " @{}/{} - {}/{} - le résultat du calcul est : {}".format(a[i],b[j],site[i],site[j],arb)
-                        log.discord(message=message)
-                        log.discord(str(match.to_numpy()))
+                        # log.discord(message=message)
+                        # log.discord(str(match.to_numpy()))
                         log.log("FOUND !!!")
                         log.log(message)
                         log.log(str(match.to_numpy()))
                         gain_2(1000,arb,site[i],a[i],site[j],b[j])
-                        log.discord("--")
+                        # log.discord("--")
 
                         
+
+
