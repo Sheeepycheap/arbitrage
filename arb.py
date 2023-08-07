@@ -129,7 +129,7 @@ def arb_foot(matches) :
                         arb = arbitrage_foot_calcul(a[i],b[j],c[k])
                         log.log(" @{}/{}/{} - {}/{}/{} - le resultat du calcul est : {}".format(a[i],b[j],c[k],site[i],site[j],site[k],arb))
 
-                        if arb > -7 :
+                        if arb > 0 :
                             
                             opp = DBhandler.Opp_football(key,team1,team2,a[i],b[j],c[k],site[i],site[j],site[k],arb)
                             opp.add()
